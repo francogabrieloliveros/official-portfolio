@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/*  For global vars
+:root {
+}
+*/
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier Prime";
+  background-image: url("/grid-bg.png");
+}
+
+footer {
+  background-image: url("/noise-bg.png");
+}
+
+.florilst {
+  font-family: "Florilst Realik";
+}
+
+.card {
+  transition:
+    left 480ms cubic-bezier(0.65, 0, 0.35, 1),
+    width 480ms cubic-bezier(0.65, 0, 0.35, 1),
+    height 480ms cubic-bezier(0.65, 0, 0.35, 1),
+    transform 480ms cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 480ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.button-behavior {
+  cursor: pointer;
+  user-select: none;
+  transition: all 200ms ease-in;
+}
+
+.button-behavior:hover {
+  transform: scale(110%);
+}
+
+.button-behavior:active {
+  transform: scale(90%);
+}
+
+.cursor {
+  transition: all 100ms ease-out;
+}
