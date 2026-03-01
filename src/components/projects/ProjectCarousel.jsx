@@ -106,7 +106,7 @@ function ProjectCarousel() {
   };
 
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-5 overflow-x-hidden">
       <div
         className="button-behavior flex h-[45px] w-[45px] items-center justify-center bg-black"
         onClick={() => slidePrev()}

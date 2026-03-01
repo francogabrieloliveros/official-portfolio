@@ -10,7 +10,7 @@ function ProjectCard({ slot, project }) {
 
   return (
     <div
-      className="card absolute flex h-[700px] w-[385px] flex-col justify-between bg-black p-3 max-sm:w-[290px]"
+      className="card absolute flex h-[700px] w-[60dvw] max-w-[385px] flex-col justify-between bg-black p-3"
       style={{
         transform: `scale(${scale}) translateY(-50%) ${active ? "rotateY(0)" : "rotateY(5deg)"}`,
         top: "50%",
