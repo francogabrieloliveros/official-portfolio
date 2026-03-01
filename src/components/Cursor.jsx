@@ -1,9 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Cursor() {
   const cursorRef = useRef(null);
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+
     const handleMove = (e) => {
       cursorRef.current.style.left = `${e.clientX}px`;
       cursorRef.current.style.top = `${e.clientY}px`;
@@ -13,10 +16,12 @@ function Cursor() {
     return () => window.removeEventListener("mousemove", handleMove);
   }, []);
 
+  if (isTouch) return null;
+
   return (
     <div
       ref={cursorRef}
-      className="cursor pointer-events-none fixed -z-[9999] -translate-x-1/2 -translate-y-1/2 rounded-full"
+      className="cursor pointer-events-none fixed -z-9999 -translate-x-1/2 -translate-y-1/2 rounded-full"
       style={{
         width: "350px",
         height: "350px",
