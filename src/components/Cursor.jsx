@@ -8,8 +8,7 @@ function Cursor() {
     setIsTouch(window.matchMedia("(pointer: coarse)").matches);
 
     const handleMove = (e) => {
-      cursorRef.current.style.left = `${e.clientX}px`;
-      cursorRef.current.style.top = `${e.clientY}px`;
+      cursorRef.current.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
     };
 
     window.addEventListener("mousemove", handleMove);
@@ -21,7 +20,7 @@ function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className="cursor pointer-events-none fixed -z-9999 -translate-x-1/2 -translate-y-1/2 rounded-full"
+      className="cursor pointer-events-none fixed -z-9999 rounded-full"
       style={{
         width: "350px",
         height: "350px",
