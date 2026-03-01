@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import MainPage from "./pages/MainPage";
-import Header from "./pages/Header";
+import Header from "./components/Header";
 import Cursor from "./components/Cursor";
 import Frame from "./components/Frame";
 import Scrollbar from "smooth-scrollbar";

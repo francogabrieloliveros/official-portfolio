@@ -31,30 +31,30 @@ function Header({ scrollbar }) {
     <header
       className={`fixed top-0 left-0 z-50 mt-8 flex w-full justify-center ${hidden ? "-translate-y-24" : "translate-y-0"} transition-all duration-300`}
     >
-      <nav className="flex gap-4">
+      <nav className="flex gap-4 max-sm:rounded-2xl max-sm:border max-sm:border-white/20 max-sm:bg-white/10 max-sm:px-5 max-sm:backdrop-blur-md">
         <a
-          className="rounded-2xl border border-white/20 bg-white/10 px-3 py-1 backdrop-blur-md"
+          className="py-1 text-sm sm:rounded-2xl sm:border sm:border-white/20 sm:bg-white/10 sm:px-3 sm:text-[1rem] sm:backdrop-blur-md"
           onClick={(e) => handleNav(e, "#home")}
           href="#home"
         >
           Home
         </a>
         <a
-          className="rounded-2xl border border-white/20 bg-white/10 px-3 py-1 backdrop-blur-md"
+          className="py-1 text-sm sm:rounded-2xl sm:border sm:border-white/20 sm:bg-white/10 sm:px-3 sm:text-[1rem] sm:backdrop-blur-md"
           onClick={(e) => handleNav(e, "#skills")}
           href="#skills"
         >
           Skills
         </a>
         <a
-          className="rounded-2xl border border-white/20 bg-white/10 px-3 py-1 backdrop-blur-md"
+          className="py-1 text-sm sm:rounded-2xl sm:border sm:border-white/20 sm:bg-white/10 sm:px-3 sm:text-[1rem] sm:backdrop-blur-md"
           onClick={(e) => handleNav(e, "#projects")}
           href="#projects"
         >
           Projects
         </a>
         <a
-          className="rounded-2xl border border-white/20 bg-white/10 px-3 py-1 backdrop-blur-md"
+          className="py-1 text-sm sm:rounded-2xl sm:border sm:border-white/20 sm:bg-white/10 sm:px-3 sm:text-[1rem] sm:backdrop-blur-md"
           onClick={(e) => handleNav(e, "#education")}
           href="#education"
         >
