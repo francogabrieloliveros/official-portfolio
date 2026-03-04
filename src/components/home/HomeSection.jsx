@@ -20,7 +20,11 @@ function HomeSection() {
         </div>
 
         <div className="flex w-[clamp(300px,75%,400px)] justify-between">
-          <a className="button-behavior" href="" target="_blank">
+          <a
+            className="button-behavior"
+            href="https://drive.google.com/file/d/1zVKez4XYETGVVK5CWzArjfRH2zwQ-lSe/view?usp=sharing"
+            target="_blank"
+          >
             <div className="flex h-[45px] items-center gap-3 bg-black px-4 text-white">
               Resume <Icons.download w="14px" />
             </div>

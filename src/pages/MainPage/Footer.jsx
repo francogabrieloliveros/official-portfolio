@@ -7,7 +7,11 @@ function Footer() {
         <div className="flex flex-wrap justify-between">
           <h3 className="text-xl font-bold">Franco Gabriel P. Oliveros</h3>
           <div className="flex gap-[3dvw]">
-            <a className="button-behavior" href="" target="_blank">
+            <a
+              className="button-behavior"
+              href="https://drive.google.com/file/d/1zVKez4XYETGVVK5CWzArjfRH2zwQ-lSe/view?usp=sharing"
+              target="_blank"
+            >
               <Icons.resume w="27px" />
             </a>
             <a
