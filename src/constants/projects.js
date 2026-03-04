@@ -8,20 +8,6 @@ import weather from "../assets/projects/weather.png";
 
 const projects = [
   {
-    image: gloflex,
-    title: "GLOFLEX",
-    desc: "GLOFLEX is an assistive technology device designed to bridge communication barriers between deaf or mute individuals and the wider community. By converting predefined sign language gestures into audible speech, the system aims to reduce social isolation and promote inclusive communication.",
-    tags: ["Arduino", "C"],
-    github: "https://github.com/francogabrieloliveros/gloflex.git",
-  },
-  {
-    image: hospital,
-    title: "Hospital Logbook with JavaFX",
-    desc: "Manage hospital operations using Hospital Logbook system built with JavaFX. With its intuitive UI, you can record staffs, patients, lab exams, lab requests while automatically logging actions. It also has a dashboard which summarizes all the information held by the system.",
-    tags: ["Java", "JavaFX", "CSS"],
-    github: "https://github.com/francogabrieloliveros/CMSC22_FINAL_PROJECT.git",
-  },
-  {
     image: draw,
     title: "Draw Collab",
     desc: "Draw with people together in real time with Draw Collab! Take note of one minute server cold start though. Built using Socket.IO, the app synchronizes drawing actions across all connected clients in real time.",
@@ -36,6 +22,20 @@ const projects = [
     github:
       "https://github.com/francogabrieloliveros/collaborative-drawing-app-client.git",
     website: "https://collaborative-drawing-app-client.vercel.app/",
+  },
+  {
+    image: gloflex,
+    title: "GLOFLEX",
+    desc: "GLOFLEX is an assistive technology device designed to bridge communication barriers between deaf or mute individuals and the wider community. By converting predefined sign language gestures into audible speech, the system aims to reduce social isolation and promote inclusive communication.",
+    tags: ["Arduino", "C"],
+    github: "https://github.com/francogabrieloliveros/gloflex.git",
+  },
+  {
+    image: hospital,
+    title: "Hospital Logbook with JavaFX",
+    desc: "Manage hospital operations using Hospital Logbook system built with JavaFX. With its intuitive UI, you can record staffs, patients, lab exams, lab requests while automatically logging actions. It also has a dashboard which summarizes all the information held by the system.",
+    tags: ["Java", "JavaFX", "CSS"],
+    github: "https://github.com/francogabrieloliveros/CMSC22_FINAL_PROJECT.git",
   },
   {
     image: aerio,
