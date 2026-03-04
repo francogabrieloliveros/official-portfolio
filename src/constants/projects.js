@@ -8,6 +8,20 @@ import weather from "../assets/projects/weather.png";
 
 const projects = [
   {
+    image: gloflex,
+    title: "GLOFLEX",
+    desc: "GLOFLEX is an assistive technology device designed to bridge communication barriers between deaf or mute individuals and the wider community. By converting predefined sign language gestures into audible speech, the system aims to reduce social isolation and promote inclusive communication.",
+    tags: ["Arduino", "C"],
+    github: "https://github.com/francogabrieloliveros/gloflex.git",
+  },
+  {
+    image: hospital,
+    title: "Hospital Logbook with JavaFX",
+    desc: "Manage hospital operations using Hospital Logbook system built with JavaFX. With its intuitive UI, you can record staffs, patients, lab exams, lab requests while automatically logging actions. It also has a dashboard which summarizes all the information held by the system.",
+    tags: ["Java", "JavaFX", "CSS"],
+    github: "https://github.com/francogabrieloliveros/CMSC22_FINAL_PROJECT.git",
+  },
+  {
     image: draw,
     title: "Draw Collab",
     desc: "Draw with people together in real time with Draw Collab! Take note of one minute server cold start though. Built using Socket.IO, the app synchronizes drawing actions across all connected clients in real time.",
@@ -24,14 +38,6 @@ const projects = [
     website: "https://collaborative-drawing-app-client.vercel.app/",
   },
   {
-    image: hugot,
-    title: "Hugot Hanay",
-    desc: "Inspired by Minute Cryptic, test your Filipino knowledge with Hugot Hanay's blending wit, wordplay, and linguistic creativity to highlight that Filipino is not an inferior language, but a language of its own.",
-    tags: ["JavaScript", "React", "Tailwind CSS", "Vite"],
-    github: "https://github.com/francogabrieloliveros/hugot-hanay.git",
-    website: "https://hugot-hanay.vercel.app/",
-  },
-  {
     image: aerio,
     title: "Aerio Katharos",
     desc: "Approximate the smallest cost to meet the pollutant reduction goals of City of Greenvale. By selecting different mitigation projects, Simplex Minimization will provide the optimum cost.",
@@ -41,18 +47,12 @@ const projects = [
     website: "https://greenvale-pollutant-reduction-proje.vercel.app/",
   },
   {
-    image: hospital,
-    title: "Hospital Logbook with JavaFX",
-    desc: "Manage hospital operations using Hospital Logbook system built with JavaFX. With its intuitive UI, you can record staffs, patients, lab exams, lab requests while automatically logging actions. It also has a dashboard which summarizes all the information held by the system.",
-    tags: ["Java", "JavaFX", "CSS"],
-    github: "https://github.com/francogabrieloliveros/CMSC22_FINAL_PROJECT.git",
-  },
-  {
-    image: gloflex,
-    title: "GLOFLEX",
-    desc: "GLOFLEX is an assistive technology device designed to bridge communication barriers between deaf or mute individuals and the wider community. By converting predefined sign language gestures into audible speech, the system aims to reduce social isolation and promote inclusive communication.",
-    tags: ["Arduino", "C"],
-    github: "https://github.com/francogabrieloliveros/gloflex.git",
+    image: hugot,
+    title: "Hugot Hanay",
+    desc: "Inspired by Minute Cryptic, test your Filipino knowledge with Hugot Hanay's blending wit, wordplay, and linguistic creativity to highlight that Filipino is not an inferior language, but a language of its own.",
+    tags: ["JavaScript", "React", "Tailwind CSS", "Vite"],
+    github: "https://github.com/francogabrieloliveros/hugot-hanay.git",
+    website: "https://hugot-hanay.vercel.app/",
   },
   {
     image: chef,
