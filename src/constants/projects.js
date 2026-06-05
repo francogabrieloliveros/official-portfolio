@@ -27,8 +27,7 @@ const projects = [
   {
     image: palayok,
     title: "Palayok",
-    jdesc:
-      "A community-driven mobile application that connects UP Los Baños residents to share surplus food and ingredients — reducing waste, one pantry at a time.",
+    desc: "A community-driven mobile application that connects UP Los Baños residents to share surplus food and ingredients — reducing waste, one pantry at a time.",
     tags: ["Dart", "Flutter", "Firebase", "GitHub Actions"],
     github: "https://github.com/francogabrieloliveros/palayok.git",
     website:
