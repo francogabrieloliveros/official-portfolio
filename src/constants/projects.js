@@ -27,7 +27,8 @@ const projects = [
   {
     image: palayok,
     title: "Palayok",
-    desc: "Draw with people together in real time with Draw Collab! Take note of one minute server cold start though. Built using Socket.IO, the app synchronizes drawing actions across all connected clients in real time.",
+    jdesc:
+      "A community-driven mobile application that connects UP Los Baños residents to share surplus food and ingredients — reducing waste, one pantry at a time.",
     tags: ["Dart", "Flutter", "Firebase", "GitHub Actions"],
     github: "https://github.com/francogabrieloliveros/palayok.git",
     website:
