@@ -5,8 +5,34 @@ import gloflex from "../assets/projects/gloflex.png";
 import hospital from "../assets/projects/hospital.png";
 import hugot from "../assets/projects/hugot.png";
 import weather from "../assets/projects/weather.png";
+import farmtotable from "../assets/projects/farmtotable.png";
+import palayok from "../assets/projects/palayok.png";
 
 const projects = [
+  {
+    image: farmtotable,
+    title: "Farm-to-table",
+    desc: "A premium, enterprise-grade digital marketplace developed for the Department of Agriculture (DA). This initiative bridges the gap between local Filipino agricultural producers and citizens, providing an elegant, transparent, and direct platform for farm-fresh commerce.",
+    tags: [
+      "TypeScript",
+      "ExpressJS",
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "Docker",
+    ],
+    github: "https://github.com/francogabrieloliveros/farm-to-table.git",
+    website: "https://farm-to-table-omega.vercel.app/",
+  },
+  {
+    image: palayok,
+    title: "Palayok",
+    desc: "Draw with people together in real time with Draw Collab! Take note of one minute server cold start though. Built using Socket.IO, the app synchronizes drawing actions across all connected clients in real time.",
+    tags: ["Dart", "Flutter", "Firebase", "GitHub Actions"],
+    github: "https://github.com/francogabrieloliveros/palayok.git",
+    website:
+      "https://drive.google.com/file/d/1vRMZ6n-WfOYVfO38s8PwoGG8_dqV3tdp/view?usp=sharing",
+  },
   {
     image: draw,
     title: "Draw Collab",

@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const scrollbar = Scrollbar.init(scrollRef.current, {
-      damping: 0.02,
+      damping: 0.08,
     });
     setScrollbar(scrollbar);
 

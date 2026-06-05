@@ -18,6 +18,13 @@ import resumeIcon from "./resume.svg";
 import tailwindIcon from "./tailwind.svg";
 import linkedinIcon from "./linkedin.svg";
 import emailIcon from "./email.svg";
+import typescriptIcon from "./typescript.svg";
+import dartIcon from "./dart.svg";
+import flutterIcon from "./flutter.svg";
+import sqlIcon from "./sql.svg";
+import firebaseIcon from "./firebase.svg";
+import dockerIcon from "./docker.svg";
+import linuxIcon from "./linux.svg";
 
 const createIcon = (src, altText) => {
   const Icon = ({ w = "19px", className = "" }) => (
@@ -47,6 +54,13 @@ const Icons = {
   tailwind: createIcon(tailwindIcon, "tailwind"),
   linkedin: createIcon(linkedinIcon, "linkedin"),
   email: createIcon(emailIcon, "email"),
+  typescript: createIcon(typescriptIcon, "typescript"),
+  dart: createIcon(dartIcon, "dart"),
+  flutter: createIcon(flutterIcon, "flutter"),
+  sql: createIcon(sqlIcon, "sql"),
+  firebase: createIcon(firebaseIcon, "firebase"),
+  docker: createIcon(dockerIcon, "docker"),
+  linux: createIcon(linuxIcon, "linux"),
 };
 
 export default Icons;

@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
-/*  For global vars
 :root {
+  --ink: #0d0d0d;
+  --paper: #f5f0e8;
+  --accent: #72c3d2;
+  --accent-warm: #e8a87c;
+  --accent-dim: rgba(114, 195, 210, 0.15);
+  --line: rgba(13, 13, 13, 0.12);
 }
-*/
 
 html {
   box-sizing: border-box;
@@ -12,17 +16,17 @@ html {
   overflow: hidden;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Courier Prime";
+  font-family: "Courier Prime", monospace;
+  background-color: var(--paper);
   background-image: url("/grid-bg.png");
+  color: var(--ink);
 }
 
 footer {
@@ -33,29 +37,208 @@ footer {
   font-family: "Florilst Realik";
 }
 
+/* ── CARD TRANSITION ── */
 .card {
   transition:
     left 480ms cubic-bezier(0.65, 0, 0.35, 1),
-    width 480ms cubic-bezier(0.65, 0, 0.35, 1),
-    height 480ms cubic-bezier(0.65, 0, 0.35, 1),
     transform 480ms cubic-bezier(0.65, 0, 0.35, 1),
     opacity 480ms cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+/* ── BUTTON BEHAVIOR ── */
 .button-behavior {
   cursor: pointer;
   user-select: none;
   transition: all 200ms ease-in;
 }
+.button-behavior:hover  { transform: scale(1.1); }
+.button-behavior:active { transform: scale(0.9); }
 
-.button-behavior:hover {
-  transform: scale(110%);
-}
-
-.button-behavior:active {
-  transform: scale(90%);
-}
-
+/* ── CURSOR ── */
 .cursor {
   transition: all 150ms ease-out;
+}
+
+/* ── SCROLL-REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── STAGGER DELAYS ── */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* ── HERO TEXT GLITCH ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-name {
+  animation: fadeSlideUp 0.9s ease both;
+}
+.hero-sub {
+  animation: fadeSlideUp 0.9s 0.2s ease both;
+}
+.hero-desc {
+  animation: fadeSlideUp 0.9s 0.35s ease both;
+}
+.hero-cta {
+  animation: fadeSlideUp 0.9s 0.5s ease both;
+}
+
+/* ── SKILL PILL HOVER ── */
+.skill-pill {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.skill-pill:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+
+/* ── PROJECT CARD HOVER ── */
+.project-card-wrap {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
+}
+.project-card-wrap:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+/* ── NAV LINK ── */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--ink);
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ── TYPEWRITER CURSOR ── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.type-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--ink);
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+/* ── FLOATING BADGE ── */
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+.float-badge {
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+/* ── PROGRESS BAR ── */
+.progress-bar {
+  height: 3px;
+  background: var(--ink);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s ease;
+}
+.progress-bar.filled {
+  transform: scaleX(1);
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+/* ── MARQUEE ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── PROJECT GRID ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── IMAGE OVERLAY ── */
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.project-card-wrap:hover .img-overlay {
+  opacity: 0.88;
+}
+
+/* ── COUNTER ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.stat-num {
+  animation: countUp 0.6s ease both;
 }
